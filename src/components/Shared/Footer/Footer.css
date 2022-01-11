@@ -1,0 +1,13 @@
+.footer-area a{
+    text-decoration: none;
+    color:gray
+   
+
+}
+.footer-area li{
+    list-style-type: none;
+    padding: 5px 0;
+}
+.text-Area{
+    color: gray;
+}

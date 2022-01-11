@@ -1,0 +1,11 @@
+.nav-item a{
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    font-size: 17px;
+   
+}
+.button-font{
+    font-size: 17px;
+    font-weight: bold;
+}
