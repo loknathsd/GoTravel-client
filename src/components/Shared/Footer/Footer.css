@@ -1,6 +1,7 @@
 .footer-area a{
     text-decoration: none;
-    color:gray
+    color:gray;
+    margin-left: -35px;
    
 
 }
@@ -10,4 +11,8 @@
 }
 .text-Area{
     color: gray;
+
+}
+.footer-area h3{
+    margin-left: 0px;
 }

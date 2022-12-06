@@ -18,7 +18,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-md-3">
-                        <h3 style={{marginLeft:'35px'}}>About</h3>
+                        <h3 >About</h3>
                         <ul>
                             <li><a href="">About us</a></li>
                             <li><a href="">FAQ</a></li>
@@ -28,7 +28,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="col-md-3">
-                        <h3 style={{marginLeft:'35px'}}>Discover</h3>
+                        <h3  >Discover</h3>
                     <ul>
                             <li><a href="">Community Blog</a></li>
                             <li><a href="">Tour Guide</a></li>
@@ -42,7 +42,7 @@ const Footer = () => {
                         <form action="">
                             <input placeholder='Your email' className='form-control' type="text" />
                             <textarea placeholder='Your Question.?' name="" id="" className='form-control mt-2' rows="2"></textarea>
-                            <button className='btn btn-outline-secondary mt-2'>Send Message</button>
+                            <button className='btn btn-outline-secondary mt-3'>Send Message</button>
 
                         </form>
                     </div>

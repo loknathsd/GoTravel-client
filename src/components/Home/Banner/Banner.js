@@ -10,7 +10,7 @@ const Banner = () => {
                     <h1>Travel With Us </h1>
                     <h2 >For The Best Deal</h2>
                     <Link to="/about"  className='btn btn-outline-warning m-4 px-4'>About Us</Link>
-                    <Link to="/contact" className='btn btn-outline-light px-4'>Contact Us</Link>
+                    <Link to="/contact" className='btn btn-outline-light  px-4'>Contact Us</Link>
                 </div>
             </div>
         </section>

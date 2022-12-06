@@ -31,37 +31,39 @@ const AllBookings = () => {
                 <div className="row">
                     <div className="col-md-12 ">
                         <h1 className='text-center mt-2 mb-4 text-danger'>All Bookings</h1>
-                        <table class="table">
-                            <thead className='table-secondary'>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Booking</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Address</th>
-                                    <th scope="col">Action</th>
+                        <div className="table-responsive">
+                            <table class="table">
+                                <thead className='table-secondary'>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Booking</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Address</th>
+                                        <th scope="col">Action</th>
 
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    allBooking.map((booking, index) =>
-                                        <tr>
-                                            <th scope="row">{index + 1}</th>
-                                            <td>{booking.username}</td>
-                                            <td>{booking.email}</td>
-                                            <td>{booking.countryName}</td>
-                                            <td>{booking.date}</td>
-                                            <td>{booking.address}</td>
-                                            <td><span onClick={() => handleDelete(booking._id)} style={{ fontSize: '20px', color: 'red' }}><FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon></span></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        allBooking.map((booking, index) =>
+                                            <tr>
+                                                <th scope="row">{index + 1}</th>
+                                                <td>{booking.username}</td>
+                                                <td>{booking.email}</td>
+                                                <td>{booking.countryName}</td>
+                                                <td>{booking.date}</td>
+                                                <td>{booking.address}</td>
+                                                <td><span onClick={() => handleDelete(booking._id)} style={{ fontSize: '20px', color: 'red' }}><FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon></span></td>
 
-                                        </tr>
-                                    )
-                                }
+                                            </tr>
+                                        )
+                                    }
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

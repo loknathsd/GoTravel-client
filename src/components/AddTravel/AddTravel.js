@@ -8,16 +8,13 @@ const AddTravel = () => {
     const [imageURL,setImageURL]= useState(null)
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
-
     const handleFile = e => {
-        console.log(e.target.files[0])
         const imageData = new FormData()
         imageData.set('key', '27857de30973670589e3e40a5817902c')
         imageData.append('image', e.target.files[0])
 
         axios.post('https://api.imgbb.com/1/upload', imageData)
             .then(res => {
-                console.log(res.data.data.display_url)
                 setImageURL(res.data.data.display_url)
             })
             .catch(err => console.log(err));
