@@ -15,7 +15,7 @@ const Package = ({pk}) => {
     }
     return (
         <div className='col-md-4 my-3'>
-            <div className="card text-center">
+            <div style={{height:'600px',width:'350px'}}  className="card text-center">
                 <div style={{fontFamily:'poppins'}} className="card-body">
                     <img className='img-fluid' src={image} alt="" />
                     <h2 className='my-3'>{name}</h2>

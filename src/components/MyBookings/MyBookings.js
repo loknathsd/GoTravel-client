@@ -9,7 +9,7 @@ const MyBookings = () => {
 
 
     useEffect(() => {
-        fetch('https://calm-cliffs-11166.herokuapp.com/myBookings?email=' + user.email)
+        fetch('https://go-travel-server-sigma.vercel.app/myBookings?email=' + user.email)
             .then(res => res.json())
             .then(data => setMyBookings(data))
     }, []);
@@ -17,7 +17,7 @@ const MyBookings = () => {
     const handleDelete = (id) => {
         const confirm = window.confirm('Are you sure cancel the booking')
         if (confirm) {
-            fetch(`https://calm-cliffs-11166.herokuapp.com/delete/${id}`, {
+            fetch(`https://go-travel-server-sigma.vercel.app/delete/${id}`, {
                 method: 'DELETE'
             })
                 .then(result => {

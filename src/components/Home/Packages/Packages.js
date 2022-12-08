@@ -1,17 +1,14 @@
 import React,{useState,useEffect} from 'react';
-import PackageImg from '../../../images/package.jpg';
 import Package from '../Package/Package';
-
-
+import { Loader } from 'rsuite';    
 
 const Packages = () => {
     const [packages,setPackages] = useState([])
 
     useEffect(()=>{
-        fetch('https://calm-cliffs-11166.herokuapp.com/travels')
+        fetch('https://go-travel-server-sigma.vercel.app/travels')
         .then(res=>res.json())
-        .then(data=>setPackages(data))
-
+        .then(data=>setPackages(data));
     },[])
     return (
         <section className='my-5 pt-5'>
@@ -19,7 +16,7 @@ const Packages = () => {
                 <h1 style={{color:'#333333',fontWeight:'bold',marginBottom:'30px'}} className='text-center text-uppercase'>Our Packages </h1>
                 <div className="row">
                     {
-                        packages.map(pk=><Package key={pk._id} pk={pk}></Package>)
+                       packages.length>0 ? packages.map(pk=><Package key={pk._id} pk={pk}></Package>) : <h1 style={{marginLeft:'500px'}}>Loading....</h1>
                     }
                 </div>
             </div>

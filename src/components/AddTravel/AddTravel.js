@@ -29,7 +29,7 @@ const AddTravel = () => {
             image: imageURL
 
         }
-       fetch('https://calm-cliffs-11166.herokuapp.com/addTravel',{
+       fetch('https://go-travel-server-sigma.vercel.app/addTravel',{
            method:'POST',
            headers:{'Content-Type':'application/json'},
            body: JSON.stringify(travelData)

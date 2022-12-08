@@ -8,7 +8,7 @@ const PackageDetail = () => {
     const history = useHistory()
 
     useEffect(()=>{
-        fetch(`https://calm-cliffs-11166.herokuapp.com/detailById/${id}`)
+        fetch(`https://go-travel-server-sigma.vercel.app/detailById/${id}`)
         .then(res=>res.json())
         .then(data=>setPackageDetail(data))
     },[])

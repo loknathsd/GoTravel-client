@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import './BookNow.css'
 import { ContextUser } from '../../App'
@@ -9,26 +9,28 @@ const BookNow = () => {
     const [user, setUser] = useContext(ContextUser)
     const [packageDetail, setPackageDetail] = useState({})
     const { id } = useParams();
+    const history = useHistory();
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch(`https://calm-cliffs-11166.herokuapp.com/detailById/${id}`)
+        fetch(`https://go-travel-server-sigma.vercel.app/detailById/${id}`)
             .then(res => res.json())
             .then(data => setPackageDetail(data))
     }, [])
 
 
     const onSubmit = data => {
-        fetch('https://calm-cliffs-11166.herokuapp.com/addBooking', {
+        fetch('https://go-travel-server-sigma.vercel.app/addBooking', {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify(data)
         })
             .then(result => {
                 console.log(result)
-                alert('Your booking successful')
-                reset()
+                alert('Your booking successful');
+                reset();
+                history.push('/home');
             })
 
     }

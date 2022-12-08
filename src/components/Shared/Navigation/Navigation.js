@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 
 
 const Navigation = () => {
-    const [user, setUser] = useContext(ContextUser)
+    const [user, setUser] = useContext(ContextUser);
     
     const history = useHistory()
     const handleLogOut = () => {
@@ -29,7 +29,7 @@ const Navigation = () => {
     return (
         <Navbar bg="dark" fixed='top' variant="dark" expand="lg">
             <Container>
-                <Navbar.Brand href="#home"><img src={Logo} alt="" /></Navbar.Brand>
+                <NavLink to="/home"><img src={Logo} alt="" /></NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto text-light nav-item ">
