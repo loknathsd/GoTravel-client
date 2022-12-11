@@ -9,7 +9,7 @@ const MyBookings = () => {
 
 
     useEffect(() => {
-        fetch('https://go-travel-server-sigma.vercel.app/myBookings?email=' + user.email)
+        fetch('https://go-travel-server-production.up.railway.app/myBookings?email=' + user.email)
             .then(res => res.json())
             .then(data => setMyBookings(data))
     }, []);
@@ -17,7 +17,7 @@ const MyBookings = () => {
     const handleDelete = (id) => {
         const confirm = window.confirm('Are you sure cancel the booking')
         if (confirm) {
-            fetch(`https://go-travel-server-sigma.vercel.app/delete/${id}`, {
+            fetch(`https://go-travel-server-production.up.railway.app/delete/${id}`, {
                 method: 'DELETE'
             })
                 .then(result => {

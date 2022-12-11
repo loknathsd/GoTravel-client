@@ -6,7 +6,7 @@ const AllBookings = () => {
     const [allBooking, setAllBooking] = useState([])
 
     useEffect(() => {
-        fetch('https://go-travel-server-sigma.vercel.app/allBookings')
+        fetch('https://go-travel-server-production.up.railway.app/allBookings')
             .then(res => res.json())
             .then(data => setAllBooking(data))
     }, [])
@@ -14,7 +14,7 @@ const AllBookings = () => {
     const handleDelete = (id) => {
         const confirm = window.confirm('Are you sure cancel the booking')
         if (confirm) {
-            fetch(`https://go-travel-server-sigma.vercel.app/delete/${id}`, {
+            fetch(`https://go-travel-server-production.up.railway.app/delete/${id}`, {
                 method: 'DELETE'
             })
                 .then(result => {
