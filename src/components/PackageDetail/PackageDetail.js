@@ -8,7 +8,7 @@ const PackageDetail = () => {
     const history = useHistory()
 
     useEffect(()=>{
-        fetch(`https://go-travel-server-production.up.railway.app/detailById/${id}`)
+        fetch(`https://go-travel.onrender.com/detailById/${id}`)
         .then(res=>res.json())
         .then(data=>setPackageDetail(data))
     },[])

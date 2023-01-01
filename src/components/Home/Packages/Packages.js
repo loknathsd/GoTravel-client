@@ -6,7 +6,7 @@ const Packages = () => {
     const [packages,setPackages] = useState([])
 
     useEffect(()=>{
-        fetch('https://go-travel-server-production.up.railway.app/travels')
+        fetch('https://go-travel.onrender.com/travels')
         .then(res=>res.json())
         .then(data=>setPackages(data));
     },[])
