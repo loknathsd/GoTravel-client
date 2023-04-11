@@ -1,7 +1,5 @@
 Project name : GoTravel
 
-live Side link : <a href="https://gotravel-3390a.web.app/">GoTravel</a>
-
 <h3>Features : </h3>
 
 <li>There has some packages for travel or tour</li>
