@@ -29,7 +29,7 @@ const AddTravel = () => {
             image: imageURL
 
         }
-       fetch('https://go-travel.onrender.com/addTravel',{
+       fetch('https://go-travel-server-production.up.railway.app/addTravel',{
            method:'POST',
            headers:{'Content-Type':'application/json'},
            body: JSON.stringify(travelData)

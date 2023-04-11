@@ -14,14 +14,14 @@ const BookNow = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch(`https://go-travel.onrender.com/detailById/${id}`)
+        fetch(`https://go-travel-server-production.up.railway.app/detailById/${id}`)
             .then(res => res.json())
             .then(data => setPackageDetail(data))
     }, [])
 
 
     const onSubmit = data => {
-        fetch('https://go-travel.onrender.com/addBooking', {
+        fetch('https://go-travel-server-production.up.railway.app/addBooking', {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify(data)

@@ -9,15 +9,15 @@ const MyBookings = () => {
 
 
     useEffect(() => {
-        fetch('https://go-travel.onrender.com/myBookings?email=' + user.email)
+        fetch('https://go-travel-server-production.up.railway.app/myBookings?email=' + user.email)
             .then(res => res.json())
             .then(data => setMyBookings(data))
-    }, []);
+    }, [user]);
 
     const handleDelete = (id) => {
         const confirm = window.confirm('Are you sure cancel the booking')
         if (confirm) {
-            fetch(`https://go-travel.onrender.com/delete/${id}`, {
+            fetch(`https://go-travel-server-production.up.railway.app/delete/${id}`, {
                 method: 'DELETE'
             })
                 .then(result => {
@@ -26,7 +26,6 @@ const MyBookings = () => {
                     setMyBookings(remain)
                 })
         }
-
     }
     return (
         <div className='my-5 py-5'>
@@ -45,7 +44,6 @@ const MyBookings = () => {
                                         <th scope="col">Date</th>
                                         <th scope="col">Address</th>
                                         <th scope="col">Action</th>
-
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -59,11 +57,9 @@ const MyBookings = () => {
                                                 <td>{booking.date}</td>
                                                 <td>{booking.address}</td>
                                                 <td><span onClick={() => handleDelete(booking._id)} style={{ fontSize: '20px', color: 'red' }}><FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon></span></td>
-
                                             </tr>
                                         )
                                     }
-
                                 </tbody>
                             </table>
                         </div>
