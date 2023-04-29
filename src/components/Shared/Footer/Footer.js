@@ -20,21 +20,20 @@ const Footer = () => {
                     <div className="col-md-3">
                         <h3 >About</h3>
                         <ul>
-                            <li><a href="">About us</a></li>
-                            <li><a href="">FAQ</a></li>
-                            <li><a href="">Register</a></li>
-                            <li><a href="">Login</a></li>
-                            <li><a href="">Terms and Conditions</a></li>
+                            <li><a href="/">About us</a></li>
+                            <li><a href="/">FAQ</a></li>
+                            <li><a href="/">Register</a></li>
+                            <li><a href="/">Login</a></li>
+                            <li><a href="/">Terms and Conditions</a></li>
                         </ul>
                     </div>
                     <div className="col-md-3">
                         <h3  >Discover</h3>
                     <ul>
-                            <li><a href="">Community Blog</a></li>
-                            <li><a href="">Tour Guide</a></li>
-                            <li><a href="">WishList</a></li>
-                            <li><a href="">Gallery</a></li>
-                           
+                            <li><a href="/">Community Blog</a></li>
+                            <li><a href="/">Tour Guide</a></li>
+                            <li><a href="/">WishList</a></li>
+                            <li><a href="/">Gallery</a></li> 
                         </ul>
                     </div>
                     <div className="col-md-3">
@@ -43,7 +42,6 @@ const Footer = () => {
                             <input placeholder='Your email' className='form-control' type="text" />
                             <textarea placeholder='Your Question.?' name="" id="" className='form-control mt-2' rows="2"></textarea>
                             <button className='btn btn-outline-secondary mt-3'>Send Message</button>
-
                         </form>
                     </div>
                 </div>

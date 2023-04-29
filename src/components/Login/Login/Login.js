@@ -8,12 +8,12 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { useHistory,useLocation } from 'react-router-dom';
 
 
-const app = initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig);
 
 const Login = () => {
-      const [user ,setUser] = useContext(ContextUser)
+      const [user ,setUser] = useContext(ContextUser);
+      console.log(app,user)
 
-    
     const provider = new GoogleAuthProvider();
      const history=useHistory()
      const location = useLocation()
@@ -28,11 +28,10 @@ const Login = () => {
                 const userInfo = {name:displayName,email,photoURL}
                 setUser(userInfo)
                 history.replace(from)
-                
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-               
+                console.log(errorCode,errorMessage);
             });
     }
     return (

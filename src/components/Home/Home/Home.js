@@ -1,7 +1,4 @@
-
 import React from 'react';
-import Footer from '../../Shared/Footer/Footer';
-import Navigation from '../../Shared/Navigation/Navigation';
 import Banner from '../Banner/Banner';
 import ChooseUs from '../ChooseUs/ChooseUs';
 import Packages from '../Packages/Packages';
@@ -14,7 +11,6 @@ const Home = () => {
             <Packages></Packages>
             <ChooseUs></ChooseUs>
             <Subscribe></Subscribe>
-            
         </div>
     );
 };

@@ -3,7 +3,6 @@ import { useHistory, useParams } from 'react-router-dom';
 
 const PackageDetail = () => {
     const [ packageDetail,setPackageDetail] = useState({})
-    
     const { id } = useParams(); 
     const history = useHistory()
 
@@ -11,7 +10,7 @@ const PackageDetail = () => {
         fetch(`https://go-travel-server-production.up.railway.app/detailById/${id}`)
         .then(res=>res.json())
         .then(data=>setPackageDetail(data))
-    },[])
+    },[id])
 
     const handleBookButton = (id)=>{
       history.push(`/bookNow/${id}`)
@@ -32,7 +31,6 @@ const PackageDetail = () => {
                       <p className='text-info'>{packageDetail.days} days</p> 
                       <button onClick={()=>handleBookButton(packageDetail._id)} className='btn btn-danger mb-5'>Book Now</button>
                     </div>
-
                     <div className="col-md-6 my-5">
                         <img src={packageDetail.image} className='img-fluid' alt="" />
                     </div>
