@@ -5,7 +5,8 @@ import './BookNow.css'
 import { ContextUser } from '../../App'
 
 const BookNow = () => {
-    const [user, setUser] = useContext(ContextUser)
+    const [user, setUser] = useContext(ContextUser);
+    console.log(setUser)
     const [packageDetail, setPackageDetail] = useState({})
     const { id } = useParams();
     const history = useHistory();
@@ -15,7 +16,7 @@ const BookNow = () => {
         fetch(`https://go-travel-server-production.up.railway.app/detailById/${id}`)
             .then(res => res.json())
             .then(data => setPackageDetail(data))
-    }, [])
+    }, [id])
 
     const onSubmit = data => {
         fetch('https://go-travel-server-production.up.railway.app/addBooking', {

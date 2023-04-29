@@ -1,7 +1,5 @@
 import React,{useState,useEffect} from 'react';
 import Package from '../Package/Package';
-import { Loader } from 'rsuite';    
-import Loading from '../../Shared/Loader/Loading';
 
 const Packages = () => {
     const [packages,setPackages] = useState([])
@@ -15,7 +13,7 @@ const Packages = () => {
         <section className='my-5 pt-5'>
             <div className="container">
                 <h1 style={{color:'#333333',fontWeight:'bold',marginBottom:'30px'}} className='text-center text-uppercase'>Our Packages </h1>
-                {packages.length === 0 && <Loading /> }
+                {/* {packages.length === 0 && <Loading /> } */}
                 <div className="row">
                     {
                        packages.length>0 ? packages.map(pk=><Package key={pk._id} pk={pk}></Package>) : <h1 style={{marginLeft:'500px'}}>Loading....</h1>

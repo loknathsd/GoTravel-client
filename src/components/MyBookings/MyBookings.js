@@ -6,7 +6,7 @@ import { ContextUser } from '../../App';
 const MyBookings = () => {
     const [myBookings, setMyBookings] = useState([])
     const [user, setUser] = useContext(ContextUser);
-
+    console.log(setUser)
 
     useEffect(() => {
         fetch('https://go-travel-server-production.up.railway.app/myBookings?email=' + user.email)
@@ -49,7 +49,7 @@ const MyBookings = () => {
                                 <tbody>
                                     {
                                         myBookings.map((booking, index) =>
-                                            <tr>
+                                            <tr key={index}>
                                                 <th scope="row">{index + 1}</th>
                                                 <td>{booking.username}</td>
                                                 <td>{booking.email}</td>
