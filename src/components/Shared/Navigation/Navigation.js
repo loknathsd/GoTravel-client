@@ -29,11 +29,11 @@ const Navigation = () => {
     return (
         <Navbar bg="dark" fixed='top' variant="dark" expand="lg">
             <Container>
-                <NavLink to="/home"><img src={Logo} alt="" /></NavLink>
+                <NavLink to="/"><img src={Logo} alt="" /></NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto text-light nav-item ">
-                        <NavLink to="/home">Home</NavLink>
+                        <NavLink to="/">Home</NavLink>
                         <NavLink to="/travels">Travels</NavLink>
                         <NavLink to="/about">About</NavLink>
                         <NavLink to="/contact">Contact</NavLink>

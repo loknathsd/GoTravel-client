@@ -30,7 +30,7 @@ function App() {
       <Router>
         <Navigation></Navigation>
         <Switch>
-          <Route exact path="/home">
+          <Route exact path="/">
             <Home></Home>
           </Route>
           <Route exact path="/">
@@ -60,12 +60,9 @@ function App() {
           <Route path="/travels">
             <Packages></Packages>
           </Route>
-
           <Route path="/addTravel">
             <AddTravel></AddTravel>
           </Route>
-
-
           <Route path="*">
             <NotFound></NotFound>
           </Route>
