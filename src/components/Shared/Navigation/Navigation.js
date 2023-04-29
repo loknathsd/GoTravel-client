@@ -45,7 +45,7 @@ const Navigation = () => {
                         }
 
                     </Nav>
-                    <h5 className='text-light py-2  mr-2'>{user.name}</h5>
+                    <h5 className='text-light py-2  mr-2 mt-1'>{user.name}</h5>
                     {user.email ? <NavLink onClick={handleLogOut} className="btn btn-light text-dark button-font px-3" to="/login">logOut</NavLink>
                         :
                         <NavLink className="btn btn-light text-dark button-font px-4" to="/login">login</NavLink>

@@ -32,7 +32,7 @@ const AllBookings = () => {
                     <div className="col-md-12 ">
                         <h1 className='text-center mt-2 mb-4 text-danger'>All Bookings</h1>
                         <div className="table-responsive">
-                            <table class="table">
+                            <table className="table">
                                 <thead className='table-secondary'>
                                     <tr>
                                         <th scope="col">#</th>

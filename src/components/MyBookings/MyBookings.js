@@ -34,7 +34,7 @@ const MyBookings = () => {
                     <div className="col">
                         <h1 className='text-center text-info mb-4'>My Bookings</h1>
                         <div className="table-responsive">
-                            <table class="table">
+                            <table className="table">
                                 <thead className='table-secondary'>
                                     <tr>
                                         <th scope="col">#</th>
