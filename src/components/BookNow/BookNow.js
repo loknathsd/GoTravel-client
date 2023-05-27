@@ -5,8 +5,7 @@ import './BookNow.css'
 import { ContextUser } from '../../App'
 
 const BookNow = () => {
-    const [user, setUser] = useContext(ContextUser);
-    console.log(setUser)
+    const {user} = useContext(ContextUser);
     const [packageDetail, setPackageDetail] = useState({})
     const { id } = useParams();
     const history = useHistory();
@@ -25,7 +24,6 @@ const BookNow = () => {
             body: JSON.stringify(data)
         })
             .then(result => {
-                console.log(result)
                 alert('Your booking successful');
                 reset();
                 history.push('/');

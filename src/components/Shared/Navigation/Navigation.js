@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 
 
 const Navigation = () => {
-    const [user, setUser] = useContext(ContextUser);
+    const {user, setUser} = useContext(ContextUser);
     
     const history = useHistory()
     const handleLogOut = () => {
@@ -20,10 +20,10 @@ const Navigation = () => {
                 email:'',
                 photo:''
             }
-            setUser(signOut)
-            history.push('/')
+            setUser(signOut);
+            history.push('/');
         }).catch((error) => {
-            
+            console.log(error);  
         });
     }
     return (

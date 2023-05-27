@@ -25,7 +25,7 @@ export const ContextUser = createContext()
 function App() {
   const [user, setUser] = useState({})
   return (
-    <ContextUser.Provider value={[user, setUser]}>
+    <ContextUser.Provider value={{user, setUser}}>
       <Router>
         <Navigation></Navigation>
         <Switch>

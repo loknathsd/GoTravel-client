@@ -11,9 +11,7 @@ import { useHistory,useLocation } from 'react-router-dom';
 const app = initializeApp(firebaseConfig);
 
 const Login = () => {
-      const [user ,setUser] = useContext(ContextUser);
-      console.log(app,user)
-
+      const {setUser} = useContext(ContextUser);
     const provider = new GoogleAuthProvider();
      const history=useHistory()
      const location = useLocation()
@@ -40,7 +38,6 @@ const Login = () => {
                 <button className='btn btn-outline-primary mb-5'><FontAwesomeIcon icon={faGoogle} size='2x'  /></button>
                 <button onClick={handleGoogleSignIn} className='btn btn-primary btn-lg mb-5 '>SignIn With Google</button>
             </div>
-
         </div>
     );
 };
