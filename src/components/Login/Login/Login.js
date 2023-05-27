@@ -1,25 +1,21 @@
 import React, { useContext } from 'react';
-import { initializeApp } from 'firebase/app';
-import firebaseConfig from './firebase.config';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { auth, provider } from './firebase.config';
+import { signInWithPopup } from "firebase/auth";
 import { ContextUser } from '../../../App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { useHistory,useLocation } from 'react-router-dom';
 
 
-const app = initializeApp(firebaseConfig);
 
 const Login = () => {
       const {setUser} = useContext(ContextUser);
-    const provider = new GoogleAuthProvider();
      const history=useHistory()
      const location = useLocation()
 
      let { from } = location.state || { from: { pathname: "/" } };
     
     const handleGoogleSignIn = () => {
-        const auth = getAuth();
         signInWithPopup(auth, provider)
             .then(result => {
                 const {displayName,email,photoURL} = result.user;
